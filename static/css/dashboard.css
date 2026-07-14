@@ -1,0 +1,128 @@
+/* ═══════════════════════════════════════════════════
+   TaskFlow — Dashboard & Analytics Styles
+   ═══════════════════════════════════════════════════ */
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xl);
+}
+
+.dashboard-grid .full-width {
+    grid-column: 1 / -1;
+}
+
+.chart-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+}
+
+.chart-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--space-xl);
+}
+
+.chart-card-title {
+    font-size: var(--font-md);
+    font-weight: 600;
+}
+
+.chart-wrapper {
+    position: relative;
+    width: 100%;
+    height: 280px;
+}
+
+.chart-wrapper canvas {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+/* Review card */
+.review-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    padding: var(--space-2xl);
+}
+
+.review-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--space-xl);
+}
+
+.review-date {
+    font-size: var(--font-lg);
+    font-weight: 700;
+}
+
+.review-score {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: var(--space-sm) var(--space-lg);
+    background: var(--bg-input);
+    border-radius: var(--radius-full);
+    font-weight: 700;
+}
+
+.review-score-value { color: var(--accent-tertiary); }
+
+.review-summary {
+    font-size: var(--font-base);
+    color: var(--text-secondary);
+    margin-bottom: var(--space-xl);
+    line-height: 1.7;
+    padding: var(--space-lg);
+    background: var(--bg-input);
+    border-radius: var(--radius-md);
+    border-left: 3px solid var(--accent-primary);
+}
+
+.review-section {
+    margin-bottom: var(--space-xl);
+}
+
+.review-section:last-child { margin-bottom: 0; }
+
+.review-section-title {
+    font-size: var(--font-base);
+    font-weight: 600;
+    margin-bottom: var(--space-md);
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+.review-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.review-list li {
+    font-size: var(--font-sm);
+    color: var(--text-secondary);
+    padding: var(--space-sm) var(--space-md);
+    background: var(--bg-input);
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+.review-list li::before { display: none; }
+
+.review-win { border-left: 2px solid #10b981; }
+.review-incomplete { border-left: 2px solid #f59e0b; }
+
+@media (max-width: 1024px) {
+    .dashboard-grid { grid-template-columns: 1fr; }
+}
